@@ -1,0 +1,25 @@
+nav.navbar.navbar-default {
+    margin-bottom: 0;
+  }
+  nav{
+      background-color: purple;
+      height: 15%;
+      padding-top: 8px;
+  }
+  .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+  }
+  h2{
+      color:white;
+      margin-left: 10px;
+  }
+  #nav-title,#nav-guess,#nav-score{
+      font-size: 20px;
+      padding: 20px;
+  }
+/* .navbar{
+      text-align: center
+  } */
+ 
