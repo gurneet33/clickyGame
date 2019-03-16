@@ -1,15 +1,28 @@
-import React from "react";
+import React, { Component } from "react";
 import "./style.css";
+import { Col, Row, Container } from "../Grid";
 
 function CardHolder(props) {
     return (
-        <div>
-            <div className="card col-3">
-                <div className="img-container">
-                    <img onClick={() => { props.shuffle(props.id) }} alt="img" src={props.image} />
-                </div>
-            </div>
+        <div className="container">
+            <ul className="list-group">
+                <Row>
+                    {props.friends.map(result => (
+                        <Col size="md-4">
+                            <li className="list-group-item" key={result.id}>
+                                <div className="card col-8 text-center">
+                                    <div className="img-container">
+                                        <img onClick={() => { props.shuffle(result.id) }} alt="img" src={result.image} src={result.image} />
+                                    </div>
+                                </div>
+                            </li >
+                        </Col>
+                    ))
+                    }
+                </Row>
+            </ul >
         </div>
+
 
     )
 }

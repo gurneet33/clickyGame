@@ -5,29 +5,63 @@ import StaticBack from './components/StaticBack';
 import Wrapper from './components/Wrapper';
 import friends from "./friends.json"
 import CardHolder from './components/CardHolder';
+import Parent from './components/parent'
+import { Col, Row, Container } from "./components/Grid";
 
 class App extends Component {
-  state = {
-    friends,
-    friend: []
+  constructor(props) {
+    super(props)
+    this.state = {
+      friends,
+      friend: {},
+      count: 0,
+      high: 0,
+      guess: "",
+      clickArray: []
+    }
   }
-  // componentDidMount() {
 
-  // }
+  topScore = () => {
 
+    this.setState((state, props) => {
+      if (state.high <= state.count)
+        return { high: state.count }
+    })
+
+
+
+  }
 
 
   handleShuffle = id => {
-    let friendArray = friends
-    this.shuffleArray(friendArray)
-    friendArray.forEach(function (item) {
+    this.shuffleArray(friends)
+    console.log(id)
+    console.log(this.state.high)
+    let newArr = this.state.clickArray;
+    console.log(newArr)
+    friends.map(item => {
+      let key = item.id
       if (item.id === id) {
-        item.clicked = true
+        console.log(item)
+        newArr.push(item)
+        this.setState({ friend: item })
+        if (item.clicked === "false") {
+          item.clicked = "true"
+          this.setState({ guess: "right", count: this.state.count + 1 })
+          this.topScore();
+        }
+        else {
+          this.setState({ guess: "wrong", count: 0 })
+          friends.map(item => {
+            item.clicked = "false"
+          })
+        }
       }
-      console.log(item.clicked)
+
+
     })
-    this.setState({ friends: friendArray })
-    console.log(friendArray);
+
+    console.log(this.state.friend)
 
   }
 
@@ -38,25 +72,19 @@ class App extends Component {
     }
   }
 
-  guessCard = id => {
-
-  }
-
   render() {
     return (
       <div>
         <Wrapper>
-          <Navbar />
-          <StaticBack />
-          {this.state.friends.map(friend =>
-            <CardHolder
-              id={friend.id}
-              key={friend.id}
-              image={friend.image}
-              shuffle={this.handleShuffle}
-              clicked={friend.clicked}
-            />)}
-
+          <Parent friends={this.state.friends}
+            shuffle={this.handleShuffle}
+            count={this.state.count}
+            guess={this.state.guess}
+            high={this.state.high}
+          >
+            <Navbar />
+            <CardHolder />
+          </Parent>
 
         </Wrapper>
       </div>
