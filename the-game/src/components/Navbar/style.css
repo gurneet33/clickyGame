@@ -26,7 +26,13 @@ nav.navbar.navbar-default {
       padding: 20px;
   }
 .header{
-  text-align: center;
+  text-align: right;
   margin: 0 auto;
 }
  
+.score{
+  margin-left: 200px
+}
+.top-score{
+  margin-left: 100px;
+}
