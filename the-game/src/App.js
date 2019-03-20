@@ -47,11 +47,11 @@ class App extends Component {
         this.setState({ friend: item })
         if (item.clicked === "false") {
           item.clicked = "true"
-          this.setState({ guess: "right", count: this.state.count + 1 })
+          this.setState({ guess: "You Answered Correctly!!!", count: this.state.count + 1 })
           this.topScore();
         }
         else {
-          this.setState({ guess: "wrong", count: 0 })
+          this.setState({ guess: "Wrong, You Lose!", count: 0 })
           friends.map(item => {
             item.clicked = "false"
           })
@@ -85,7 +85,6 @@ class App extends Component {
             <Navbar />
             <CardHolder />
           </Parent>
-
         </Wrapper>
       </div>
     );

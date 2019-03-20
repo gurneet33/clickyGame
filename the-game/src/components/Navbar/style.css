@@ -1,3 +1,9 @@
+
+.navbar{
+  position:fixed;
+  width:100%;
+  
+}
 nav.navbar.navbar-default {
     margin-bottom: 0;
   }
@@ -19,7 +25,8 @@ nav.navbar.navbar-default {
       font-size: 20px;
       padding: 20px;
   }
-/* .navbar{
-      text-align: center
-  } */
+.header{
+  text-align: center;
+  margin: 0 auto;
+}
  

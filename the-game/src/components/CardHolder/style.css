@@ -1,12 +1,15 @@
 .col-md-4{
   margin-bottom: 10px
 }
+.main-container{
+  position: relative;
+}
 .card {
     background: #fff;
     border-radius: 2px;
     height: 225px;
     margin: 3rem;
-    position: relative;
+    /* position: relative; */
     width: 250px;
     box-shadow: 0 3px 6px #999, 0 3px 6px #999;
   

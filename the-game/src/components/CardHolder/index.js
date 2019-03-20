@@ -4,7 +4,7 @@ import { Col, Row, Container } from "../Grid";
 
 function CardHolder(props) {
     return (
-        <div className="container">
+        <div className="container main-container">
             <ul className="list-group">
                 <Row>
                     {props.friends.map(result => (

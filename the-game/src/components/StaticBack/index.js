@@ -4,7 +4,7 @@ import "./style.css";
 function StaticBack() {
     return (
         <div className="back-image">
-            Click a card Once and not twice
+            <h2> Click a Card Once and Not Twice</h2>
         </div>
     )
 }

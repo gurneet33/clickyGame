@@ -1,5 +1,10 @@
 .back-image{
-    background-image: url('./white-waves.png');
+    background-image: url('./folk-pattern-black.png');
     width: 100%;
-    height: 400px;
+    height: 370px;
+    color: white;
+    text-align: center
+}
+h2{
+    padding-top: 10%;
 }
