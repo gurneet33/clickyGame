@@ -3,7 +3,7 @@ import './style.css'
 
 function Navbar(props) {
     return (
-        <nav className="nav navbar navbar-expand-lg navbar-light bg-light ">
+        <nav className="nav navbar navbar-expand-lg navbar-light bg-light fixed-top">
 
             <h3 id="nav-title" className="navbar-item">Clicky Game</h3>
             <div className="row header">

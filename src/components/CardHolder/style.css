@@ -1,9 +1,9 @@
 .col-md-4{
   margin-bottom: 10px
 }
-.main-container{
-  position: relative;
-}
+/* .main-container{
+  position: absolute;
+} */
 .card {
     background: #fff;
     border-radius: 2px;

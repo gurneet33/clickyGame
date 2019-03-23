@@ -1,6 +1,6 @@
 
 .navbar{
-  position:fixed;
+  position: fixed;
   width:100%;
   
 }
@@ -31,8 +31,6 @@ nav.navbar.navbar-default {
 }
  
 .score{
-  margin-left: 200px
-}
-.top-score{
-  margin-left: 100px;
+  margin-left: 200px;
+  position: relative;
 }
